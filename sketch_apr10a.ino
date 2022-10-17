@@ -1,7 +1,7 @@
 int a(0);
-int lastbuttonstate(0); //#zero is not pressed and one is pressed.
+int lastbuttonstate(0);
 
-void check(int x){ //checks if the number is even or odd
+void check(int x){ //check for odd
     if(x%2!=0){
       digitalWrite(3, HIGH); //led diode
       Serial.println(x);
@@ -13,8 +13,8 @@ void check(int x){ //checks if the number is even or odd
 
 void setup() {
   Serial.begin(9600);
-  pinMode(2, INPUT_PULLUP); //a button
-  pinMode(3, OUTPUT); //a led diode
+  pinMode(2, INPUT_PULLUP); //button
+  pinMode(3, OUTPUT); //led diode
 }
  
 void loop() {
